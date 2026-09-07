@@ -1,0 +1,13 @@
+N=int(input())
+v=list(map(int,input().split()))
+n=int(input())
+x=[]
+for i in v:
+    b=bin(i)
+    b=b[2:]
+    b=b[:-n]
+    if b=="":
+        x.append(0)
+    else:
+        x.append(int(b,2))
+print(x)
