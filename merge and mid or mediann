@@ -1,0 +1,12 @@
+n1=int(input())
+n2=int(input())
+x=set()
+for i in range(n1+n2):
+    x.add(int(input()))
+x=list(x)
+x.sort()
+n=len(x)
+if n%2==1:
+    print(x[n//2])
+else:
+    print((x[n//2]+x[n//2-1])/2)
