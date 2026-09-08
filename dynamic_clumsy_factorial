@@ -1,0 +1,22 @@
+n=list(map(int,input().split()))
+if len(n)>1:
+    n1=n[0]
+    n2=n[1]
+else:
+    n1=n[0]
+    n2=1
+result=[]
+op1,op2=["//","*"],["+","-"]
+i,j=0,0
+for k in range(n1,n2-1,-1):
+    result.append(k)
+    if k%2==0:
+        result.append(op1[i])
+        i=(i+1)%2
+    else:
+        result.append(op2[j])
+        j=(j+1)%2
+result=result[:len(result)-1]
+
+exp="".join(map(str,result))
+print(eval(exp))
